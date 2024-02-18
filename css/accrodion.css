@@ -1,0 +1,33 @@
+#index .index-all .index-list li{
+    list-style:none;
+    cursor: pointer;
+}
+#index .index-all .index-list .title{
+    position: relative;
+}
+#index .index-all .index-list li .title::before,
+#index .index-all .index-list li .title::after{
+    content: "";
+    height: 2px;
+    width: 15px;
+    background-color: #333;
+    position: absolute;
+    top: 40%;
+    left: -30px;
+}
+#index .index-all .index-list li .title::after{
+    transform: rotate(90deg);
+}
+#index .index-all .index-list li .title.close::before{
+   transform: rotate(45deg);
+}
+#index .index-all .index-list li .title.close::after{
+    transform: rotate(135deg);
+}
+#index .index-all .index-list .box{
+    background-color: #fff;
+    padding: 10px 15px;
+     margin:15px 0 ;
+     display: none;
+ }
+ 

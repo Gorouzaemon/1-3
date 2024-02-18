@@ -1,0 +1,42 @@
+.link{
+  position: relative;
+  color: #333;
+}
+.link::before,.link::after{
+  position: absolute;
+  bottom:0 ;
+  left: 0;
+  width: 100%;
+  background-color: #dedede;
+  content: "";
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+.link::after{
+  background-color: #333;
+  width: 0;
+}
+.link:hover::after{
+  width: 100%;
+  background-color:#333;
+}
+.link span{
+    position: relative;
+}
+.link span::after{
+  content: "";
+  height: 7px;
+  width:7px ;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  position: absolute;
+  top: 33%;
+  right: -15px;
+}
+.link:hover span::after{
+    right: -20px;
+}
